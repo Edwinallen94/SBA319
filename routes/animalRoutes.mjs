@@ -44,7 +44,7 @@ router.put("/:id", async (req, res) => {
 //delete
 router.delete("/:id", async (req, res) => {
   try {
-    let deltedAnimal = await Song.findByIdandDelete(req.params.id);
+    let deletedAnimal = await Song.findByIdandDelete(req.params.id);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server Error" });

@@ -3,7 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import connectDB from "./db/conn.mjs";
-import songRoutes from "./routes/animalRoutes.mjs";
+import animalRoutes from "./routes/animalRoutes.mjs";
 
 //Setup
 dotenv.config();
@@ -16,7 +16,7 @@ connectDB();
 //Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
-app.use("/song", songRoutes);
+app.use("/animal", animalRoutes);
 
 //Routes
 
