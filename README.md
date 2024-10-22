@@ -21,10 +21,17 @@ Open MongoDB Compass:
 Launch MongoDB Compass and connect to your MongoDB database.
 Perform CRUD Operations:
 
-Use a tool like Postman or Insomnia to:
+Use a tool like Postman or ThunderClient to:
 Post new animal entries.
 Delete animals.
 Retrieve animal information.
 View Changes in MongoDB Compass:
 
 Check MongoDB Compass to see the results of your operations.
+
+NPM START
+http://localhost:3000/
+THEN
+http://localhost:3000/animal
+
+ENJOY!
