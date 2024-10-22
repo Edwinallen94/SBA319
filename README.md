@@ -8,3 +8,23 @@ This project is a server application built with Node.js, Express, and MongoDB. I
 - **CRUD API**: Create, Read, Update, Delete operations implemented using Express and MongoDB.
 - **MongoDB Indexing**: Indexes are created to optimize query performance.
 - **Validation Rules**: MongoDB schema validation to ensure data consistency.
+
+Instructions
+Install Nodemon (if not already installed):
+
+Ensure nodemon is installed globally.
+Start Your Application:
+
+Navigate to your project directory and use nodemon to run your main JavaScript file.
+Open MongoDB Compass:
+
+Launch MongoDB Compass and connect to your MongoDB database.
+Perform CRUD Operations:
+
+Use a tool like Postman or Insomnia to:
+Post new animal entries.
+Delete animals.
+Retrieve animal information.
+View Changes in MongoDB Compass:
+
+Check MongoDB Compass to see the results of your operations.
