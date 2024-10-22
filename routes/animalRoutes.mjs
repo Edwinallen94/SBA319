@@ -6,7 +6,7 @@ const router = express.Router();
 //create
 router.post("/", async (req, res) => {
   try {
-    const newAnimal = new Song(req.body);
+    const newAnimal = new Animal(req.body);
 
     await newAnimal.save();
 
@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
 //read
 router.get("/", async (req, res) => {
   try {
-    const allAnimal = await Song.find({});
+    const allAnimal = await Animal.find({});
 
     res.json(allAnimal);
   } catch (err) {
@@ -32,9 +32,14 @@ router.get("/", async (req, res) => {
 // update
 router.put("/:id", async (req, res) => {
   try {
-    let updatedAnimal = await Song.findByIdandUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    let updatedAnimal = await Animal.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    res.json(updatedAnimal);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server Error" });
@@ -44,7 +49,8 @@ router.put("/:id", async (req, res) => {
 //delete
 router.delete("/:id", async (req, res) => {
   try {
-    let deletedAnimal = await Song.findByIdandDelete(req.params.id);
+    let deletedAnimal = await Animal.findByIdAndDelete(req.params.id);
+    res.json(deletedAnimal);
   } catch (err) {
     console.error(err);
     res.status(500).json({ msg: "Server Error" });
